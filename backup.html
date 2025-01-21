@@ -1,0 +1,66 @@
+<form class="contact-form shadow p-4 rounded">
+    <!-- Row 1: Nom, Email, Téléphone -->
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <label for="nom" class="form-label"><i class="fas fa-user"></i> Nom</label>
+            <input type="text" class="form-control" id="nom" placeholder="Votre nom" required>
+        </div>
+        <div class="col-md-4">
+            <label for="email" class="form-label"><i class="fas fa-envelope"></i> Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Votre email" required>
+        </div>
+        <div class="col-md-4">
+            <label for="telephone" class="form-label"><i class="fas fa-phone"></i> Téléphone</label>
+            <input type="tel" class="form-control" id="telephone" placeholder="Votre numéro de téléphone" required>
+        </div>
+    </div>
+    <!-- Row 2: Lieu de Réception, Cérémonie, Date -->
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <label for="lieu" class="form-label"><i class="fas fa-map-marker-alt"></i> Lieu de Réception</label>
+            <input type="text" class="form-control" id="lieu" placeholder="Lieu de réception" required>
+        </div>
+        <div class="col-md-4">
+            <label for="ceremonie" class="form-label"><i class="fas fa-church"></i> Cérémonie</label>
+            <input type="text" class="form-control" id="ceremonie" placeholder="Église, Jardin, etc.">
+        </div>
+        <div class="col-md-4">
+            <label for="date" class="form-label"><i class="fas fa-calendar-alt"></i> Date</label>
+            <input type="date" class="form-control" id="date" required>
+        </div>
+    </div>
+    <!-- Row 3: Nombre d'invités, Budget -->
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label for="invites" class="form-label"><i class="fas fa-users"></i> Nombre d'Invités</label>
+            <input type="number" class="form-control" id="invites" placeholder="Nombre d'invités" required>
+        </div>
+        <div class="col-md-6">
+            <label for="budget" class="form-label"><i class="fas fa-wallet"></i> Votre Budget</label>
+            <input type="text" class="form-control" id="budget" placeholder="Votre budget" required>
+        </div>
+    </div>
+    <!-- Checkbox: Besoin -->
+    <div class="mb-3">
+        <label class="form-label"><i class="fas fa-camera"></i> Vous avez besoin de :</label>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="photo_video">
+            <label class="form-check-label" for="photo_video">Photo et Vidéo</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="photo_uniquement">
+            <label class="form-check-label" for="photo_uniquement">Photo uniquement</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="video_uniquement">
+            <label class="form-check-label" for="video_uniquement">Vidéo uniquement</label>
+        </div>
+    </div>
+    <!-- Message -->
+    <div class="mb-3">
+        <label for="message" class="form-label"><i class="fas fa-comment-dots"></i> Message</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Votre message"></textarea>
+    </div>
+    <!-- Envoyer -->
+    <button type="submit" class="btn btn-primary w-100"><i class="fas fa-paper-plane"></i> Envoyer</button>
+</form>

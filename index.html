@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TwinsPhoto</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <!-- <a class="navbar-brand" href="#">TwinsPhoto</a> -->
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo/logo.svg" alt="TwinsPhoto Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#films">Films</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#photos">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="text-center text-white" style="background-image: url('assets/img/header.jpg'); background-size: cover; background-position: center; height: 100vh;">
+        <div class="d-flex flex-column justify-content-center h-100">
+            <h1 class="display-4 font-weight-bold">L'art de capturer vos émotions.</h1>
+            <p class="lead">Photographe & Vidéaste</p>
+            <a href="#" class="btn btn-dark mt-3">Demander un devis</a>
+            
+        </div>
+    </header>
+
+<!-- Updated Intro Section -->
+<section class="intro-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left: Text Content -->
+            <div class="col-md-6 d-flex align-items-center">
+                <div class="intro-content">
+                    <h2 class="intro-title">Des moments figés dans le temps</h2>
+                    <p class="intro-subtitle">
+                        <i class="fas fa-camera-retro me-2"></i>Capturez vos instants précieux avec passion et créativité.
+                    </p>
+                    <p class="intro-subtitle">
+                        <i class="fas fa-film me-2"></i>Des souvenirs inoubliables racontés en photos et vidéos.
+                    </p>
+                    <p class="intro-subtitle">
+                        <i class="fas fa-heart me-2"></i>Chaque image est un récit unique, chargé d’émotion.
+                    </p>
+                </div>
+            </div>
+            <!-- Right: Scrolling Images -->
+            <div class="col-md-6">
+                <div class="image-slider">
+                    <button class="slider-btn prev-btn">&lt;</button>
+                    <div class="slider-images">
+                        <img src="assets/img/team.jpg" alt="Team 1">
+                        <img src="assets/img/team.jpg" alt="Team 2">
+                        <img src="assets/img/team.jpg" alt="Team 3">
+                    </div>
+                    <button class="slider-btn next-btn">&gt;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Services Section -->
+<section id="services" class="container py-5">
+    <h2 class="text-center mb-5">Nos Services</h2>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="service-card">
+                <span class="service-number">01</span>
+                <h3 class="service-title">Mariage</h3>
+                <img src="assets/img/header.jpg" alt="Mariage" class="img-fluid rounded mb-3">
+                <p>Our portrait sessions are designed to showcase your personality and style in stunning imagery.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="service-card">
+                <span class="service-number">02</span>
+                <h3 class="service-title">Shooting</h3>
+                <img src="assets/img/header.jpg" alt="Shooting" class="img-fluid rounded mb-3">
+                <p>Our portrait sessions are designed to showcase your personality and style in stunning imagery.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="service-card">
+                <span class="service-number">03</span>
+                <h3 class="service-title">Engagement</h3>
+                <img src="assets/img/header.jpg" alt="Engagement" class="img-fluid rounded mb-3">
+                <p>Our portrait sessions are designed to showcase your personality and style in stunning imagery.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- steps Section -->
+    <section class="steps-section py-5">
+        <div class="container text-center">
+            <h2 class="mb-5">Les Différentes Étapes</h2>
+            <div class="steps-wrapper d-flex justify-content-center align-items-center position-relative">
+                <!-- Navigation Buttons -->
+                <button class="prev-step btn position-absolute start-0" aria-label="Previous Step">
+                    &#8592;
+                </button>
+    
+                <!-- Step Cards -->
+                <div class="step-content active card shadow p-4">
+                    <span class="step-number">01</span>
+                    <h3 class="step-title">Préparation du mariage</h3>
+                    <p class="step-description">
+                        Nous apprenons à nous connaître autour d'un café ou en visio. Vous avez soigneusement parcouru notre site Web, et notre travail vous plaît. La prochaine étape consiste à organiser un moment pour discuter pour s'assurer que nous sommes parfaitement adaptés l'un à l'autre !
+                    </p>
+                </div>
+                <div class="step-content card shadow p-4">
+                    <span class="step-number">02</span>
+                    <h3 class="step-title">Le Grand Jour</h3>
+                    <p class="step-description">
+                        La date est réservée ! Le plaisir commence. Une fois votre date officiellement réservée, l'organisation photo et vidéo commence. Nous sommes ravis de faire partie de cette journée exceptionnelle et de capturer tous les moments inoubliables.
+                    </p>
+                </div>
+                <div class="step-content card shadow p-4">
+                    <span class="step-number">03</span>
+                    <h3 class="step-title">Vos Images sont Prêtes</h3>
+                    <p class="step-description">
+                        Nous livrons vos photos dans un délai d'environ six semaines après votre mariage, via une galerie en ligne. Votre film sera prêt environ dans un délai de 8 à 12 semaines.
+                    </p>
+                </div>
+    
+                <!-- Navigation Buttons -->
+                <button class="next-step btn position-absolute end-0" aria-label="Next Step">
+                    &#8594;
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    
+
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <h2>Nos Valeurs</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <h3 class="value-number">01</h3>
+                        <h4 class="value-title">Authenticité</h4>
+                        <p>Nous capturons chaque instant de votre journée de mariage avec authenticité, pour vous permettre de revivre ces moments précieux pour les années à venir.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <h3 class="value-number">02</h3>
+                        <h4 class="value-title">Créativité</h4>
+                        <p>Nous sommes passionnés par la création d'images et de vidéos de mariage artistiques et uniques, en utilisant des techniques créatives pour capturer les détails et les émotions les plus significatifs de votre journée.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <h3 class="value-number">03</h3>
+                        <h4 class="value-title">Spontanéité</h4>
+                        <p>Dans la discrétion nous capturons des moments spontanés et naturels de votre journée de mariage, pour vous permettre de revivre chaque moment authentique de cette journée spéciale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="latest-film py-5">
+        <div class="container text-center">
+            <h2 class="mb-5">Nos derniers films</h2>
+            <div class="film-container position-relative mx-auto">
+                <video src="assets/img/back.mp4" class="video-fluid" poster="assets/img/back.jpg" muted controls></video> <!-- Supprimez autoplay et loop -->
+                <div class="film-overlay d-flex flex-column justify-content-center align-items-center">
+                    <h3 class="text-uppercase">Château de la Galinière</h3>
+                    <div class="play-button">
+                        <i class="fa fa-play-circle" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="mt-2">Joana & Johan</h4>
+                </div>
+            </div>
+            <a href="#" class="btn btn-dark mt-4">Voir Plus de Films</a>
+        </div>
+    </section>
+    
+    
+    <!-- statistics Section -->
+    <section class="stats-section py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6">
+                    <h2 class="stat-number" data-target="210">0</h2>
+                    <p class="stat-label">Mariages Réalisés</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h2 class="stat-number" data-target="684500">0</h2>
+                    <p class="stat-label">Photos Prises</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h2 class="stat-number" data-target="856">0</h2>
+                    <p class="stat-label">Vidéos Visionnées</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h2 class="stat-number" data-target="652">0</h2>
+                    <p class="stat-label">Cafés Bus</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section class="testimonials-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Témoignages</h2>
+            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Témoignage 1 -->
+                    <div class="carousel-item active text-center">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                "Le film de notre mariage est tout simplement incroyable! Merci mille fois."
+                            </p>
+                            <footer class="testimonial-author">Rahma & Manil</footer>
+                        </div>
+                    </div>
+                    <!-- Témoignage 2 -->
+                    <div class="carousel-item text-center">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                "Un travail magnifique et des souvenirs inoubliables! Nous vous recommandons vivement."
+                            </p>
+                            <footer class="testimonial-author">Yasmine & Karim</footer>
+                        </div>
+                    </div>
+                    <!-- Témoignage 3 -->
+                    <div class="carousel-item text-center">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                "Merci pour votre professionnalisme et votre gentillesse. Nos photos sont parfaites."
+                            </p>
+                            <footer class="testimonial-author">Amina & Samir</footer>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contrôles du Carousel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    
+
+    <!-- Footer Section -->
+    <footer class="footer-section py-5">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <!-- Logo Section -->
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <img src="assets/img/logo/logo.svg" alt="Logo TwinsPhoto" class="img-fluid mb-3" style="height: 200px; width: 200px;">
+                    <p>&copy; 2025 Special Moment<br>Tous droits réservés</p>
+                </div>
+    
+                <!-- Navigation Links -->
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="footer-title">Navigation</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Accueil</a></li>
+                        <li><a href="#films" class="footer-link">Films</a></li>
+                        <li><a href="#photos" class="footer-link">Photos</a></li>
+                        <li><a href="#services" class="footer-link">Nos Services</a></li>
+                        <li><a href="#about" class="footer-link">À Propos</a></li>
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Info -->
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="footer-title">Contact</h5>
+                    <p>Email : <a href="mailto:contact@specialmoment.fr" class="footer-link">contact@twinsPhoto.fr</a></p>
+                    <p>Tél : 06 34 49 65 61</p>
+                    <p>654 Av. Adresse<br>34170Perpignan</p>
+                </div>
+    
+                <!-- Follow Us -->
+                <div class="col-md-3">
+                    <h5 class="footer-title">Suivez-nous</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#" class="footer-link"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="footer-link"><i class="fab fa-youtube"></i></a></li>
+                        <!-- <li class="list-inline-item"><a href="#" class="footer-link"><i class="fab fa-vimeo"></i></a></li> -->
+                    </ul>
+                    <a href="#" class="btn btn-dark mt-3">Demander un devis</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

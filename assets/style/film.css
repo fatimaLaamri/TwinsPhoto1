@@ -1,0 +1,41 @@
+/* Film Header Styles */
+.film-header {
+    background-size: cover;
+    background-position: center;
+    height: 60vh; /* Smaller height compared to the index page header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.film-header h1 {
+    font-size: 3rem; /* Adjust title size */
+    margin-bottom: 10px;
+}
+
+.film-header p {
+    font-size: 1.2rem; /* Subtitle size */
+    font-style: italic;
+}
+
+/* Masonry Grid for Films */
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 15px; /* Space between items */
+}
+
+.grid-item video {
+    display: block;
+    width: 100%;
+    height: auto; /* Maintain original video dimensions */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item video:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}

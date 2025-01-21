@@ -1,0 +1,826 @@
+/*********************/
+/* General Styles */
+/*********************/
+body {
+    
+    /*font-family: Arial, sans-serif;  Global font */
+    line-height: 1.6;
+    color: #333; /* Global text color */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /* font-family: 'Lato', sans-serif; */
+    /* font-family: Arial, sans-serif; */
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+p, blockquote {
+    font-size: 1.1rem; /* Unified font size for text */
+    margin-bottom: 15px;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+/*********************/
+/* Navbar Styles */
+/*********************/
+.navbar {
+    transition: background-color 0.3s, box-shadow 0.3s;
+    height: 65px;
+    display: flex;
+    align-items: center;
+   
+}
+
+.navbar-dark {
+    background-color: transparent;
+    z-index: 2;
+    
+}
+
+.navbar-light.scrolled {
+    background-color: rgb(255, 251, 251);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-light.scrolled .nav-link,
+.navbar-light.scrolled .navbar-brand {
+    color: #333 !important;
+    
+}
+
+.navbar-light.scrolled .nav-link:hover {
+    color: #858525 !important;
+}
+
+.navbar-dark .nav-link {
+    color: rgb(234, 231, 231); /* Makes links visible on dark/transparent background */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Vertically center the logo */
+    height: 100%; /* Make sure the logo stays within the navbar height */
+}
+
+.navbar-brand img {
+    max-height: 150px; /* Adjust the logo size */
+    width: auto; /* Maintain aspect ratio */
+    margin: auto 0; /* Center within the navbar */
+   margin-top: 26px;
+   transition: filter 0.3s ease-in-out;
+   filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
+
+}
+
+
+/*********************/
+/* Header Styles */
+/*********************/
+header {
+    background-image: url('assets/img/header.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(234, 231, 231);
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 4rem;
+    z-index: 2;
+    color: rgb(234, 231, 231);
+}
+
+header p {
+    font-size: 1.5rem;
+    z-index: 2;
+    color: rgb(234, 231, 231);
+}
+
+header h1, header p {
+    opacity: 0; /* Initial state: invisible */
+    transform: translateY(20px); /* Initial state: slightly down */
+    animation: fadeInUp 1.5s ease-out forwards; /* Animation applied */
+}
+header .btn-dark {
+    background-color:#1e1d1d ;
+    color: #fff;
+    border-radius: 20px;
+    padding: 15px 30px; /* Inner padding for the button */
+    transition: background-color 0.3s ease;
+    z-index: 2;
+    text-align: center; /* Ensure text is centered */
+    display: inline-block; /* Prevent stretching to full width */
+    width: auto; /* Adjust width to fit content */
+    max-width: 400px; /* Optional: Limit the button width */
+    margin: 0 auto; /* Center the button */
+    margin-top: 15px;
+}
+
+
+
+header .btn-dark:hover {
+    background-color: #895f0a;
+    border: none;
+}
+
+header p {
+    animation-delay: 0.5s; /* Delay for <p> to appear after <h1> */
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Return to original position */
+    }
+}
+
+
+
+/*********************/
+/* Intro Section Styles */
+/*********************/
+.intro-section {
+    padding: 60px 20px;
+    background-color: #ebe7e796;
+    
+}
+
+.intro-content {
+    max-width: 600px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.intro-title {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+.intro-subtitle {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.8;
+    animation: fadeIn 1.5s ease-in-out;
+    margin-bottom: 15px;
+}
+
+.image-slider {
+    position: relative;
+    width: 400px;
+    height: auto;
+    overflow: hidden;
+    margin-left: auto; /* Center alignment */
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.slider-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-images img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+.intro-subtitle i {
+    margin-right: 10px; /* Adds space between the icon and text */
+    vertical-align: middle; /* Aligns icon with the text */
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.intro-section {
+    opacity: 0;
+    transform: translateY(20px); /* Initially out of view */
+    transition: all 0.8s ease-in-out;
+}
+
+.intro-section.animate-section {
+    opacity: 1;
+    transform: translateY(0); /* Bring into view */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-section {
+        text-align: center;
+    }
+
+    .image-slider {
+        height: 200px;
+    }
+
+    .slider-images img {
+        height: 200px;
+    }
+
+    .intro-content {
+        text-align: center;
+    }
+}
+
+/*********************/
+/* Section Styles */
+/*********************/
+section {
+    padding: 60px 20px;
+}
+
+section h2 {
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    text-align: center;
+    /* font-weight: bold; */
+    color: #333;
+    /* text-transform: uppercase; */
+}
+
+
+/*********************/
+/* Services Section */
+/*********************/
+#services {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+}
+
+.service-card {
+    /* background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 550px; /* Adjust this height as needed */
+    display: flex;
+    flex-direction: column; /* Ensures consistent alignment of content */
+    justify-content: space-between; /* Ensures proper spacing between elements */
+
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+.service-number{
+    font-size: 1.5rem;
+    color:#895f0a;
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0px;
+}
+
+.service-title {
+    font-size: 1.5rem;
+    /* color: #272625; */
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 1.1rem;
+    color: #666;
+}
+.service-card {
+    opacity: 0;
+    transform: translateY(20px); /* Hidden below */
+    transition: all 0.6s ease-out;
+}
+
+.service-card.animate-card {
+    opacity: 1;
+    transform: translateY(0); /* Animate to normal position */
+}
+
+
+
+/*******************/
+/* Steps Section */
+/*******************/
+.steps-section {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.steps-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Fit card content */
+    width: 100%;
+    max-width: 2000px; /* Restrict max width */
+    margin: 0 auto;
+
+    height: 280px; /* Ajustez cette valeur selon la hauteur de vos cartes */
+    overflow: hidden; /* Empêche les cartes de sortir */
+}
+
+.step-content {
+    width: 100%;
+    max-width: 900px; /* Ensure consistent card size */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    z-index: 0;
+    position: absolute; /* Les cartes restent absolues mais dans un conteneur avec une hauteur définie */
+    top: 0;
+}
+
+.step-content.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.step-content.exit-left {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.step-content.exit-right {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.step-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #895f0a;
+    margin-bottom: 10px;
+}
+
+.step-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.step-description {
+    /* font-size: 1.2rem; */
+    color: #666;
+    margin-bottom: 0;
+}
+
+button.prev-step,
+button.next-step {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #895f0a;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    z-index: 10;
+}
+
+button.prev-step:hover,
+button.next-step:hover {
+    color: #d8a43b;
+}
+
+button.prev-step {
+    left: -50px; /* Left of the card */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+button.next-step {
+    right: -50px; /* Right of the card */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .steps-wrapper {
+        flex-direction: column;
+    }
+
+    button.prev-step,
+    button.next-step {
+        position: static;
+        margin: 10px 0;
+        transform: none;
+    }
+}
+
+
+/*********************/
+/* Values Section */
+/*********************/
+.values-section {
+    background-image: url('/assets/img/back.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    position: relative;
+    text-align: center;
+    padding: 50px 20px; /* Reduced padding for smaller height */
+}
+
+.values-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Darker overlay for better contrast */
+    z-index: 1;
+}
+
+.values-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.values-section h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: white; /* Title in white */
+    /* text-transform: uppercase; */
+}
+
+.value-card {
+    background: rgba(255, 255, 255, 0.2); /* Transparent card */
+    border-radius: 10px;
+    padding: 20px;
+    color: white; /* Ensure text is white */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+.value-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.value-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #fff;
+    /* text-transform: uppercase; */
+}
+
+.values-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .values-section h2 {
+        font-size: 2rem; /* Adjust title size for smaller screens */
+    }
+
+    .value-number {
+        font-size: 1.5rem;
+    }
+
+    .value-title {
+        font-size: 1.2rem;
+    }
+
+    .values-section p {
+        font-size: 0.9rem;
+    }
+}
+
+/*********************/
+/* Latest Films Section */
+/*********************/
+.latest-film {
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.latest-film h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.film-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.film-container video {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* 
+.film-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.film-overlay.hidden {
+    opacity: 0;
+    pointer-events: none; 
+} */
+.film-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.film-overlay.hidden {
+    opacity: 0;
+    pointer-events: none; /* Disable interactions when hidden */
+}
+
+
+
+
+.film-container:hover .film-overlay {
+    opacity: 1;
+}
+
+.film-overlay h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.film-overlay h4 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.play-button {
+    font-size: 3rem;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.play-button:hover {
+    
+    transform: scale(1.2);
+}
+
+
+@media (max-width: 768px) {
+    .latest-film h2 {
+        font-size: 1.8rem;
+    }
+
+    .film-overlay h3, .film-overlay h4 {
+        font-size: 1.2rem;
+    }
+
+    .play-button {
+        font-size: 2.5rem;
+    }
+}
+
+
+/*********************/
+/* Statistics Section */
+/*********************/
+.stats-section {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+
+/* .stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    transform: translateY(20px); 
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+} */
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    opacity: 0; /* Caché initialement */
+    transform: translateY(20px); /* Légèrement décalé vers le bas */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animation douce */
+}
+
+.stat-number.visible {
+    opacity: 1; /* Devient visible */
+    transform: translateY(0); /* Position normale */
+}
+
+
+
+
+.stat-label {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+
+
+/* Section Témoignages */
+.testimonials-section {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.carousel-inner {
+    padding: 30px;
+}
+
+.testimonial-content {
+    max-width: 700px;
+    margin: 0 auto;
+    font-style: italic;
+    color: #444;
+    position: relative;
+}
+
+.testimonial-quote {
+    font-size: 2rem;
+    color: #ff6f61; /* Accent couleur */
+    margin-bottom: 15px;
+}
+
+.testimonial-text {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.testimonial-author {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #888;
+    margin-top: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #333;
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #555;
+}
+
+
+/*********************/
+/* Footer Styles */
+/*********************/
+.footer-section {
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.footer-section .footer-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.footer-section .footer-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-section .footer-link:hover {
+    color: #a0520d;
+    text-decoration: underline;
+}
+
+.footer-section .list-inline-item {
+    margin-right: 10px;
+}
+
+.footer-section .btn-dark {
+    background-color: #333;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.footer-section .btn-dark:hover {
+    background-color: #555;
+}
+

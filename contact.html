@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style/styles.css">
+    <link rel="stylesheet" href="assets/style/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <!-- <a class="navbar-brand" href="#">TwinsPhoto</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Our Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#films">Films</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#photos">Photos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="contact-header text-center text-white" style="background-image: url('assets/img/contact-header.jpg');">
+        <div class="d-flex flex-column justify-content-center h-100">
+            <h1 class="display-5 font-weight-bold">Contactez-nous</h1>
+            <p class="lead">"Nous sommes impatients de faire partie de votre histoire spéciale"</p>
+        </div>
+    </header>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Formulaire de Contact</h2>
+            <form id="contact-form" class="contact-form shadow p-4 rounded">
+                <!-- Row 1: Nom, Email, Téléphone -->
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="nom" class="form-label"><i class="fas fa-user"></i> Nom</label>
+                        <input type="text" name="nom" class="form-control" id="nom" placeholder="Votre nom" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="email" class="form-label"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="telephone" class="form-label"><i class="fas fa-phone"></i> Téléphone</label>
+                        <input type="tel" name="telephone" class="form-control" id="telephone" placeholder="Votre numéro de téléphone" required>
+                    </div>
+                </div>
+                <!-- Row 2: Lieu de Réception, Cérémonie, Date -->
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="lieu" class="form-label"><i class="fas fa-map-marker-alt"></i> Lieu de Réception</label>
+                        <input type="text" name="lieu" class="form-control" id="lieu" placeholder="Lieu de réception" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="ceremonie" class="form-label"><i class="fas fa-church"></i> Cérémonie</label>
+                        <input type="text" name="ceremonie" class="form-control" id="ceremonie" placeholder="Église, Jardin, etc.">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="date" class="form-label"><i class="fas fa-calendar-alt"></i> Date</label>
+                        <input type="date" name="date" class="form-control" id="date" required>
+                    </div>
+                </div>
+                <!-- Row 3: Nombre d'invités, Budget -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="invites" class="form-label"><i class="fas fa-users"></i> Nombre d'Invités</label>
+                        <input type="number" name="invites" class="form-control" id="invites" placeholder="Nombre d'invités" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="budget" class="form-label"><i class="fas fa-wallet"></i> Votre Budget</label>
+                        <input type="text" name="budget" class="form-control" id="budget" placeholder="Votre budget" required>
+                    </div>
+                </div>
+                <!-- Message -->
+                <div class="mb-3">
+                    <label for="message" class="form-label"><i class="fas fa-comment-dots"></i> Message</label>
+                    <textarea class="form-control" name="message" id="message" rows="4" placeholder="Votre message"></textarea>
+                </div>
+                <!-- Envoyer -->
+                <button type="submit" class="btn btn-primary w-100"><i class="fas fa-paper-plane"></i> Envoyer</button>
+            </form>
+            
+        </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+    <!-- Footer -->
+  
+    <!-- Footer Section -->
+    <footer class="footer-section py-5">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <!-- Logo Section -->
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <img src="assets/img/logo.png" alt="Logo Special Moment" class="img-fluid mb-3">
+                    <p>&copy; 2025 Special Moment<br>Tous droits réservés</p>
+                </div>
+    
+                <!-- Navigation Links -->
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="footer-title">Navigation</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Accueil</a></li>
+                        <li><a href="#films" class="footer-link">Films</a></li>
+                        <li><a href="#photos" class="footer-link">Photos</a></li>
+                        <li><a href="#services" class="footer-link">Nos Services</a></li>
+                        <li><a href="#about" class="footer-link">À Propos</a></li>
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Info -->
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="footer-title">Contact</h5>
+                    <p>Email : <a href="mailto:contact@specialmoment.fr" class="footer-link">contact@specialmoment.fr</a></p>
+                    <p>Tél : 06 25 58 74 28</p>
+                    <p>654 Av. Georges FRAICHE<br>34170 CASTELNAU-LE-LEZ</p>
+                </div>
+    
+                <!-- Follow Us -->
+                <div class="col-md-3">
+                    <h5 class="footer-title">Suivez-nous</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#" class="footer-link"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="footer-link"><i class="fab fa-youtube"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="footer-link"><i class="fab fa-vimeo"></i></a></li>
+                    </ul>
+                    <a href="#" class="btn btn-dark mt-3">Demander un devis</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    emailjs.init('zvFfM73qU8_JtAKp0'); // Remplacez 'YOUR_PUBLIC_KEY' par votre clé publique EmailJS
+</script>
+
+</body>
+</html>

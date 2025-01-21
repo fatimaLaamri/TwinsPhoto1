@@ -1,0 +1,48 @@
+/* Contact Header */
+.contact-header {
+    background-size: cover;
+    background-position: center;
+    height: 50vh; /* Smaller height for contact header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contact-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Contact Form */
+.contact-form {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form .form-control {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form .btn-primary {
+    background-color: #333;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+    background-color: #555;
+}
